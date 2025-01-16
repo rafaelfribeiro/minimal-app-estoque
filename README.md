@@ -5,7 +5,6 @@ This is a simple CRUD (Create, Read, Update, Delete) application built using Fla
 ## Project Structure
 
 ```
-```
 ├── app
 │   ├── __init__.py
 │   ├── models.py
