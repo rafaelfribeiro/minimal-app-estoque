@@ -1,0 +1,21 @@
+{% extends "base.html" %}
+
+{% block title %}Atualizar Registro{% endblock %}
+
+{% block content %}
+    <div class="container">
+        <h1>Atualizar Registro</h1>
+        <form action="{{ url_for('main.update', id=record.id) }}" method="POST">
+            <div class="form-group">
+                <label for="name">Nome Produto:</label>
+                <input type="text" id="name" name="name" class="form-control" value="{{ record.name }}" required>
+            </div>
+            <div class="form-group">
+                <label for="description">Descrição:</label>
+                <textarea id="description" name="description" class="form-control" required>{{ record.description }}</textarea>
+            </div>
+            <button type="submit" class="btn btn-primary">Atualizar</button>
+            <a href="{{ url_for('main.index') }}" class="btn btn-secondary">Voltar</a>
+        </form>
+    </div>
+{% endblock %}
